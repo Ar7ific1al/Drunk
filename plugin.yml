@@ -1,0 +1,8 @@
+author: Ar7ific1al
+description: A test plugin for drunken players!
+main: me.ar7ific1al.drunk
+name: Bukkit Plugin Template
+url: 
+version: 1.0
+commands:
+permissions:
