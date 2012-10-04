@@ -1,8 +1,38 @@
 author: Ar7ific1al
 description: A test plugin for drunken players!
-main: me.ar7ific1al.drunk
-name: Bukkit Plugin Template
+main: me.ar7ific1al.drunk.Drunk
+name: Drunk
 url: 
-version: 1.0
+version: 1.1
 commands:
+    drink:
+      description: Base command for Drunk.
+      usage: /<command> help
+    drunk:
+      description: Base Admin command for Drunk.
+      usage: /<command> help
 permissions:
+    drunk.*:
+      description: Gives access to all Drunk commands.
+      children:
+          drunk.info: true
+          drunk.drinklist: true
+          drink.ale: true
+          drink.lager: true
+          drunk.admin: true
+    drunk.drink.*:
+      description: Gives access to all Drink commands.
+      children:
+          drunk.drink.ale: true
+          drunk.drink.lager: true
+          drunk.drinklist: true
+    drunk.drink.ale:
+      description: Gives access to /drink ale
+    drunk.drink.lager:
+      description: Gives access to /drink lager
+    drunk.drinklist:
+      description: Gives access to /drink list
+    drunk.info:
+      description: Gives access to /drink help
+    drunk.admin:
+          description: Gives access to admin commands
